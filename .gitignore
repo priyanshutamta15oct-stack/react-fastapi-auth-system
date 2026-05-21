@@ -1,0 +1,56 @@
+# -----------------------------
+# Python
+# -----------------------------
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# SQLite Database
+*.db
+
+# Environment Variables
+.env
+
+# -----------------------------
+# Node / React
+# -----------------------------
+node_modules/
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# -----------------------------
+# VS Code
+# -----------------------------
+.vscode/
+
+# -----------------------------
+# OS Files
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# Pytest / Cache
+# -----------------------------
+.pytest_cache/
+.mypy_cache/
+
+# -----------------------------
+# Coverage
+# -----------------------------
+.coverage
+htmlcov/
+
+# -----------------------------
+# Misc
+# -----------------------------
+.idea/
+*.swp
