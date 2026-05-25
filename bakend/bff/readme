@@ -1,0 +1,288 @@
+# Full Stack Authentication System
+
+A modern full-stack authentication application built using **React.js**, **FastAPI**, **SQLite**, and **JWT Authentication**.
+
+This project demonstrates a complete authentication flow including:
+
+- User Signup
+- User Login
+- Password Hashing using bcrypt
+- JWT Token Generation
+- Protected Backend Routes
+- Persistent Login using localStorage
+- Frontend ↔ Backend Integration
+- SQLite Database Persistence
+
+---
+
+# Tech Stack
+
+## Frontend
+- React.js
+- JavaScript
+- CSS
+- Fetch API
+
+## Backend
+- FastAPI
+- SQLAlchemy
+- SQLite
+- JWT (python-jose)
+- bcrypt / passlib
+
+---
+
+# Features
+
+## Authentication
+- Secure user registration
+- Password hashing with bcrypt
+- JWT-based login authentication
+- Protected API routes
+- Persistent login state
+
+## Frontend
+- Controlled React forms
+- Async API handling
+- Authentication state management
+- Token storage using localStorage
+- Conditional UI rendering
+
+## Backend
+- REST APIs using FastAPI
+- SQLAlchemy ORM integration
+- Dependency Injection using Depends()
+- JWT token verification
+- SQLite database persistence
+
+---
+
+# Project Structure
+
+```bash
+project/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   └── main.jsx
+│
+├── bff/
+│   ├── core/
+│   │   └── security.py
+│   │
+│   ├── database/
+│   │   ├── database.py
+│   │   └── db_dependency.py
+│   │
+│   ├── models/
+│   │   └── user_model.py
+│   │
+│   ├── routers/
+│   │   └── auth_router.py
+│   │
+│   ├── main.py
+│   ├── auth.db
+│   └── requirements.txt
+```
+
+---
+
+# Authentication Flow
+
+```text
+React Frontend
+      ↓
+Login Request
+      ↓
+FastAPI Backend
+      ↓
+Verify Credentials
+      ↓
+Generate JWT Token
+      ↓
+Store Token in localStorage
+      ↓
+Frontend Sends Token
+      ↓
+Protected Route Access
+```
+
+---
+
+# API Endpoints
+
+## Signup
+
+```http
+POST /signup
+```
+
+### Request Body
+
+```json
+{
+  "fullName": "Priyansh",
+  "email": "test@gmail.com",
+  "password": "123456"
+}
+```
+
+---
+
+## Login
+
+```http
+POST /login
+```
+
+### Response
+
+```json
+{
+  "access_token": "jwt_token_here",
+  "token_type": "bearer"
+}
+```
+
+---
+
+## Protected Route
+
+```http
+GET /protected
+```
+
+### Authorization Header
+
+```http
+Authorization: Bearer <token>
+```
+
+---
+
+# Installation
+
+## Clone Repository
+
+```bash
+git clone <repository-url>
+```
+
+---
+
+# Frontend Setup
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+---
+
+# Backend Setup
+
+## Create Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+## Activate Virtual Environment
+
+### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+### Linux / Mac
+
+```bash
+source venv/bin/activate
+```
+
+---
+
+## Install Dependencies
+
+```bash
+pip install fastapi uvicorn sqlalchemy python-jose passlib[bcrypt] bcrypt==4.0.1 python-dotenv
+```
+
+---
+
+## Run Backend
+
+```bash
+uvicorn main:app --reload
+```
+
+---
+
+# Database
+
+This project uses:
+- SQLite
+- SQLAlchemy ORM
+
+User data is stored in:
+
+```bash
+auth.db
+```
+
+---
+
+# Security Features
+
+- Password hashing using bcrypt
+- JWT token authentication
+- Protected backend routes
+- Authorization headers
+- Duplicate email prevention
+
+---
+
+# Concepts Implemented
+
+## React Concepts
+- useState
+- useEffect
+- Controlled Components
+- Conditional Rendering
+- Async/Await
+- Fetch API
+
+## Backend Concepts
+- REST APIs
+- JWT Authentication
+- Password Hashing
+- Dependency Injection
+- SQLAlchemy ORM
+- SQLite Persistence
+
+---
+
+# Future Improvements
+
+- PostgreSQL integration
+- Docker support
+- Refresh Tokens
+- Role-Based Access
+- React Router
+- Axios Interceptors
+- Deployment using Nginx + Gunicorn
+- Redis session handling
+
+---
+
+# Author
+
+**Priyansh Tamta**
+
+Python FastAPI Developer | Full Stack Developer
